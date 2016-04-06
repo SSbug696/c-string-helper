@@ -38,6 +38,9 @@ int main() {
     ss.wrap("Some message", "<<", ">>");
     cout << str << endl;
 
+
+    ss.reverse().set("apptext", 0)->wrap("apptext", "<<", ">>")->replace("<<apptext>>");
+
     return 0;   
 }
 
