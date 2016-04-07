@@ -13,35 +13,36 @@ bool checkSimbols(char c) {
   return flag;
 }
 
+
 int main() {
-    string  str =  "This text is a bit strange! Yeah!";
-    string sep = "!";
-    string temp = "?!";
-    StringHelper ss(str);
+  string  str =  "This text is a bit strange! Yeah!";
+  string sep = "!";
+  string temp = "?!";
+  StringHelper ss(str);
 
-    cout << "replace <<" << endl;
-    ss.replace(temp, sep)->reverse();
-    cout << str << endl;
+  cout << "replace <<" << endl;
+  ss.replace(temp, sep)->reverse();
+  cout << str << endl;
 
-    cout << "reverse with rules <<" << endl;
-    ss.reverse(checkSimbols);
-    cout << str << endl;
-
-
-    cout << "set substring <<" << endl;
-    string sset = " Some message: ";
-    ss.set(sset, 0);
-    cout << str << endl;
+  cout << "reverse with rules <<" << endl;
+  ss.reverse(checkSimbols);
+  cout << str << endl;
 
 
-    cout << "wrap word <<" << endl;
-    ss.wrap("Some message", "<<", ">>");
-    cout << str << endl;
+  cout << "set substring <<" << endl;
+  string sset = " Some message: ";
+  ss.set(sset, 0);
+  cout << str << endl;
 
 
-    ss.reverse()->set("apptext", 0)->wrap("apptext", "<<", ">>")->replace("<<apptext>>");
+  cout << "wrap word <<" << endl;
+  ss.wrap("Some message", "<<", ">>");
+  cout << str << endl;
 
-    return 0;   
+
+  //ss.reverse()->set("apptext", 0)->wrap("apptext", "<<", ">>")->replace("<<apptext>>");
+
+  return 0;   
 }
 
 

@@ -70,39 +70,39 @@ public:
 
     
   StringHelper * replace(const string & temp, const string & separator, int begin = 0, int end = 0) {
-      bool flag = true, changed = false;
+    bool flag = true, changed = false;
 
-      size_t  tmp_contain = 0, tmp_it = 0,
-              sep_sz = separator.size(),
-              tmp_size = temp.size();
+    size_t  tmp_contain = 0, tmp_it = 0,
+            sep_sz = separator.size(),
+            tmp_size = temp.size();
 
-      if(end <= 0 || end > s.size()) end = s.size();
-      if(begin >= end || begin < 0) {
-        begin = 0;
-        end   = s.size();
-      }
-    
-      // cut the sub string
-      string t_str = s.substr(begin, end - begin);
-      // remove substr of source string
-      s.erase(begin, end - begin);
+    if(end <= 0 || end > s.size()) end = s.size();
+    if(begin >= end || begin < 0) {
+      begin = 0;
+      end   = s.size();
+    }
+  
+    // cut the sub string
+    string t_str = s.substr(begin, end - begin);
+    // remove substr of source string
+    s.erase(begin, end - begin);
 
-      while( (tmp_contain = t_str.find(separator, tmp_it)) != string::npos) {
-        //cout << tmp_contain << endl;
-        tmp_it = tmp_contain + 1  + sep_sz;
-        // size sub-string
-        int sz_str = t_str.size();
-        // remove the template-simbol
-        t_str.erase(tmp_contain, sep_sz );
-        // define the difference in size between separate string and template string
-        sz_str = sz_str + ( tmp_size - sep_sz  );
-        // change original size
-        t_str.resize(sz_str);
-        t_str.insert(tmp_contain, temp);
-      }
-      // set updated string
-      s.insert(begin, t_str);
-      return this;
+    while( (tmp_contain = t_str.find(separator, tmp_it)) != string::npos) {
+      //cout << tmp_contain << endl;
+      tmp_it = tmp_contain + 1  + sep_sz;
+      // size sub-string
+      int sz_str = t_str.size();
+      // remove the template-simbol
+      t_str.erase(tmp_contain, sep_sz );
+      // define the difference in size between separate string and template string
+      sz_str = sz_str + ( tmp_size - sep_sz  );
+      // change original size
+      t_str.resize(sz_str);
+      t_str.insert(tmp_contain, temp);
+    }
+    // set updated string
+    s.insert(begin, t_str);
+    return this;
   }
 
 
