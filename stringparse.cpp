@@ -36,7 +36,7 @@ int main() {
 
 
   cout << "wrap word <<" << endl;
-  ss.wrap("Some message", "<<", ">>");
+  ss.wrap("Same message", "<<", ">>");
   cout << str << endl;
 
 
