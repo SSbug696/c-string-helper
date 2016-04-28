@@ -40,7 +40,7 @@ int main() {
   cout << str << endl;
 
 
-  //ss.reverse()->set("apptext", 0)->wrap("apptext", "<<", ">>")->replace("<<apptext>>");
+  //ss.reverse()->set("apptext", 0)->wrap("apptext", "<<", ">>")->replace("<<apptext>>", "apptext");
 
   return 0;   
 }
