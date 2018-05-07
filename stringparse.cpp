@@ -21,7 +21,7 @@ int main() {
   StringHelper ss(str);
 
   cout << "replace <<" << endl;
-  ss.replace(temp, sep)->reverse();
+  ss.replace(temp, sep, 0, 0)->reverse(0);
   cout << str << endl;
 
   cout << "reverse with rules <<" << endl;
@@ -36,11 +36,8 @@ int main() {
 
 
   cout << "wrap word <<" << endl;
-  ss.wrap("Same message", "<<", ">>");
+  ss.wrap("message", "<<", ">>", 0, 0);
   cout << str << endl;
-
-
-  //ss.reverse()->set("apptext", 0)->wrap("apptext", "<<", ">>")->replace("<<apptext>>", "apptext");
 
   return 0;   
 }
