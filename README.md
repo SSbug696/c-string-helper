@@ -1,5 +1,6 @@
 # Example
 
+### Init
 ```string str = "This   text is a bit strange! Yeah!   ";
   string sep = "!";
   string temp = "?!";
@@ -9,7 +10,7 @@
 #### Trim (remove backspaces from left and right border)
   ```ss.lr_trim();
   > Output: before trim 38 symbols length
-  > Output: This   text is a bit strange! Yeah!
+  > Output: This text is a bit strange! Yeah!
   > Output: after trim 35 symbols length. Left and right backspaces is removed
 ```
 #### Inject substring
