@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/ssbug696/c-string-helper/badge)](https://www.codefactor.io/repository/github/ssbug696/c-string-helper)
+
 # Example
 
 ### Init
